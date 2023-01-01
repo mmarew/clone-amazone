@@ -1,5 +1,5 @@
 # Getting Started with Create React App
-
+it is deployed on https://cloned-e.web.app/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
