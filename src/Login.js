@@ -12,7 +12,7 @@ function Login() {
       .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         if (auth) {
-          history.push("/");
+          history("/");
         }
       })
       .catch((error) => alert(error.message));
@@ -22,13 +22,13 @@ function Login() {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((auth) => {
-        history.push("/");
+        history("/");
       })
       .catch((error) => alert(error.message));
   };
   return (
     <div className="login">
-      <Link to="/">
+      <Link to="/home">
         <img
           className="login__logo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
