@@ -7,9 +7,20 @@ import Login from "./Login";
 import { useStateValue } from "./StateProvider";
 import { useEffect } from "react";
 import { auth } from "./firebase";
+import Payment from "./Payment";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import Order from "./Order";
+import Orders from "./Orders";
+// import PrivateRoute from "./PrivateRoute";
 
+const promise = loadStripe(
+  "pk_test_51MLSRBHDG20hmXZIIp9nowlLzBWHpD4A9vRz121Aa0qocbN7z0HxoE9VWqWw2xkJWgUJjoIVuptaLPljmPfLmfCj00v59heTMP"
+);
+//
 function App() {
   const [{ user }, dispatch] = useStateValue();
+
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
@@ -28,13 +39,53 @@ function App() {
   return (
     <>
       <Router>
-        <Header />
         <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/Checkout" element={<Checkout />} />
-          </Route>
+          <Route
+            path="/Checkout"
+            element={
+              <>
+                <Header />
+                <Checkout />
+              </>
+            }
+          />
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Home />
+              </>
+            }
+          />{" "}
+          <Route
+            path="/payment"
+            element={
+              <>
+                <Header />
+                <Elements stripe={promise}>
+                  <Payment />
+                </Elements>
+              </>
+            }
+          ></Route>
+          <Route
+            path="/login"
+            element={
+              <>
+                <Login />
+              </>
+            }
+          />
+          <Route
+            path="/orders"
+            element={
+              <>
+                <Header />
+                <Orders />
+              </>
+            }
+          />
         </Routes>
       </Router>
     </>
