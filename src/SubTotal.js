@@ -28,9 +28,7 @@ const SubTotal = () => {
         thousandSeparator={true}
         prefix={"$"}
       />
-      <button onClick={(e) => history("/payment")}>
-        Proceed to Checkout
-      </button>
+      <button onClick={(e) => history("/payment")}>Proceed to Checkout</button>
     </div>
   );
 };

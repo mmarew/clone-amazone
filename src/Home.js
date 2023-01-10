@@ -10,6 +10,7 @@ function Home() {
           src="https://images-eu.ssl-images-amazon.com/images/G/02/digital/video/merch2016/Hero/Covid19/Generic/GWBleedingHero_ENG_COVIDUPDATE__XSite_1500x600_PV_en-GB._CB428684220_.jpg"
           alt=""
         />
+
         <div className="home__row">
           <Product
             id="12321341"
@@ -27,7 +28,6 @@ ASUS ZenBook Duo UX481 Laptop, 14” FHD NanoEdge Bezel Touch, Intel Core i7-105
             image="https://images-na.ssl-images-amazon.com/images/I/814LADIi8NL._AC_SX522_.jpg"
           />
         </div>
-
         <div className="home__row">
           <Product
             id="3"
@@ -49,6 +49,15 @@ ASUS ZenBook Duo UX481 Laptop, 14” FHD NanoEdge Bezel Touch, Intel Core i7-105
             price={314.01}
             rating={4}
             image="https://images-na.ssl-images-amazon.com/images/I/81Ml8NQYfYL._AC_UX679_.jpg"
+          />
+        </div>
+        <div className="home__row">
+          <Product
+            id="6"
+            title="YAMAHA P125 88-Key Weighted Action Digital Piano With Power Supply And Sustain Pedal, Black"
+            price={649.99}
+            rating={3}
+            image="https://images-na.ssl-images-amazon.com/images/I/71aFZyG4THL._AC_SL1500_.jpg"
           />
         </div>
 
@@ -75,15 +84,6 @@ ASUS ZenBook Duo UX481 Laptop, 14” FHD NanoEdge Bezel Touch, Intel Core i7-105
             image="https://images-na.ssl-images-amazon.com/images/I/81T6hx8XDTL._AC_SL1500_.jpg"
           />
         </div> */}
-        <div className="home__row">
-          <Product
-            id="6"
-            title="YAMAHA P125 88-Key Weighted Action Digital Piano With Power Supply And Sustain Pedal, Black"
-            price={649.99}
-            rating={3}
-            image="https://images-na.ssl-images-amazon.com/images/I/71aFZyG4THL._AC_SL1500_.jpg"
-          />
-        </div>
       </div>
     </>
   );

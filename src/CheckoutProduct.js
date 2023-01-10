@@ -1,8 +1,6 @@
 import React from "react";
 import "./CheckoutProduct.css";
 import { useStateValue } from "./StateProvider";
-let image =
-  "https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg";
 function CheckoutProduct({ image, rating, title, price, id }) {
   const [{ basket }, dispatch] = useStateValue();
   const removeFromBasket = () => {
